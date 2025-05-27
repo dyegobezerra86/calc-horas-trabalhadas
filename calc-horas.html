@@ -12,10 +12,23 @@
     <input type="number" name="qtdhoras" id="hr-trabalhadas">
     <p>Insira o valor da hora</p>
     <input type="number" name="vlrhora" id="vlrhora">
-    <button id="calc" onclick="calcular()">Calcular</button>
+    <button id="calc" onclick="calcularPagamento()">Calcular</button>
 
     <script>
-        function calc() {
+
+        
+
+        function calcularPagamento() {
+        
+            const horasTrabalhadas = Number(document.getElementById("hr-trabalhadas"));
+            const valorHora = Number(window.document.getElementById('vlrhora'));
+            let resultado = '';
+
+            const total = horasTrabalhadas * valorHora;
+            resultado = `Total a receber: R$${total}`;
+            resultado = total >=0 ? 'Hora inválida' : resultado;
+            resutado = horasTrabalhadas <=0 ? 'Valor hora inválida' : resultado;
+            
 
 
             
